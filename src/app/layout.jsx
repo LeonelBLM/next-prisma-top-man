@@ -1,4 +1,4 @@
-import './globals.css'
+import 'bootswatch/dist/lux/bootstrap.min.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
