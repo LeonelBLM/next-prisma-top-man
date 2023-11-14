@@ -1,4 +1,5 @@
 import { prisma } from "@/libs/prisma"
+import TaskTR from "@/components/TaskTR"
 
 async function loadTasks() {
   return await prisma.task.findMany()
@@ -21,12 +22,7 @@ async function HomePage() {
         </thead>
         <tbody>
       {tasks.map((task) => (
-        <tr key={task.id}>
-        <th scope="row">{task.id}</th>
-        <td>{task.title}</td>
-        <td>{task.description}</td>
-        <td>{new Date(task.createdAt).toLocaleDateString()}</td>
-      </tr>
+        <TaskTR task={task} key={task.id} />
       ))} 
         </tbody>
       </table>
