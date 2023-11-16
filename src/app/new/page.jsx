@@ -69,9 +69,24 @@ function NewPage({ params }) {
                                 value={description}
                             />
                         </div>
-                        <div className="d-flex m-2">
-                            <button type="submit" className="btn btn-outline-primary">Guardar</button>
-                            <button type="" className="btn btn-outline-danger">Cancelar</button>
+                        <div className="d-flex mt-4">
+                            <button type="submit" className="btn btn-outline-primary m-2">Guardar</button>
+                            <button type="" className="btn btn-outline-danger m-2">Cancelar</button>
+                            {
+                              params.id && (
+                                <button type="button" className="btn btn-outline-danger m-2"
+                                onClick={async () => {
+                                 const res = await fetch(`/api/tasks/${params.id}`, {
+                                        method: "DELETE",   
+                                    })
+                                    const data = await res.json()
+                                    router.refresh();
+                                    router.push("/");
+                                }}
+                                >Eliminar
+                                </button>
+                              )  
+                            }
                         </div>
 
                     </fieldset>
