@@ -41,7 +41,7 @@ function NavbarClient() {
           </li>
         </ul>
         <form className="d-flex">
-        <Link href="/login">
+        <Link href="/auth/register">
         <button className="btn btn-secondary my-2 my-sm-0" type="button">ACCEDER</button>
         </Link>
           
