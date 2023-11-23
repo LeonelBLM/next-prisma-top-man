@@ -1,6 +1,7 @@
 "use client"
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import "../../styles/login.css"
 
 function RegisterPage() {
@@ -111,7 +112,9 @@ function RegisterPage() {
           </fieldset>
           <div className="d-flex mt-4">
             <button type="submit" className="btn btn-outline-light m-2">Guardar</button>
-            <button type="" className="btn btn-outline-danger m-2">Cancelar</button>
+            <Link href='/'>
+            <button type="button" className="btn btn-outline-danger m-2">Cancelar</button>
+            </Link>
           </div>
         </form>
       </div>

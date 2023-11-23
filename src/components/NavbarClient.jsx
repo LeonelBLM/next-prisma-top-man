@@ -34,17 +34,18 @@ function NavbarClient() {
             <div className="dropdown-menu">
               <a className="dropdown-item" href="#">Nacional</a>
               <a className="dropdown-item" href="#">Internacional</a>
-              <a className="dropdown-item" href="#">Formulario</a>
               <div className="dropdown-divider"></div>
               <a className="dropdown-item" href="#">Socios</a>
             </div>
           </li>
         </ul>
         <form className="d-flex">
-        <Link href="/auth/register">
-        <button className="btn btn-secondary my-2 my-sm-0" type="button">ACCEDER</button>
+        <Link href="/auth/login">
+        <button className="btn btn-secondary my-2 my-sm-0 m-2" type="button">ACCEDER</button>
         </Link>
-          
+        <Link href="/auth/register">
+        <button className="btn btn-secondary my-2 my-sm-0 m-2" type="button">REGISTRARSE</button>
+        </Link>
         </form>
       </div>
     </div>

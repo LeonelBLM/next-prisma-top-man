@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
+import Link from "next/link";
 import "../../styles/login.css"
 
 function LoginPage() {
@@ -17,8 +18,7 @@ function LoginPage() {
   const [error, setError] = useState(null)
 
   const onSubmit = handleSubmit(async (data) => {
-    console.log(data);
-
+  
     const res = await signIn("credentials", {
       email: data.email,
       password: data.password,
@@ -76,8 +76,10 @@ function LoginPage() {
             </div>
           </fieldset>
           <div className="d-flex mt-4">
-            <button type="submit" className="btn btn-outline-light m-2">Guardar</button>
+            <button type="submit" className="btn btn-outline-light m-2">Entrar</button>
+            <Link href='/'>
             <button type="button" className="btn btn-outline-danger m-2">Cancelar</button>
+            </Link>
           </div>
         </form>
       </div>
