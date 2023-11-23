@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 function Navbar() {
     return (
@@ -24,6 +26,11 @@ function Navbar() {
                             </Link>
                         </li>
                     </ul>
+                    <form className="d-flex">
+                        <button className="btn btn-secondary my-2 my-sm-0"
+                        onClick={() => signOut()}
+                        >LOGOUT</button>
+                    </form>
                 </div>
             </div>
         </nav>
