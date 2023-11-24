@@ -34,7 +34,7 @@ function HomePage() {
             <div className="col-xl-2 col-md-4">
               <div className="icon-box">
                 <i className="ri-calendar-todo-line"></i>
-                <h3> <Link legacyBehavior href="/new">
+                <h3> <Link legacyBehavior href="/users/chofer">
                       <a>Formulario registro</a>
                      </Link> </h3>
               </div>

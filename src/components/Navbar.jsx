@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div className="container-fluid">
-                <Link className="navbar-brand" href="/">
+                <Link className="navbar-brand" href="/users/">
                     TOP-MAN
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,13 +15,13 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarColor01">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link legacyBehavior href="/new">
+                            <Link legacyBehavior href="/">
                                 <a className="nav-link">Formularios</a>
                             </Link>
 
                         </li>
                         <li className="nav-item">
-                            <Link legacyBehavior href="/reports">
+                            <Link legacyBehavior href="/">
                                 <a className="nav-link" >Reportes</a>
                             </Link>
                         </li>

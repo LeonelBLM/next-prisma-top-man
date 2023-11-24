@@ -109,7 +109,9 @@ function NewChofer({ params }) {
                         </div>
                         <div className="d-flex mt-4">
                             <button type="submit" className="btn btn-outline-primary m-2">Guardar</button>
-                            <button type="" className="btn btn-outline-danger m-2">Cancelar</button>
+                            <button type="button" className="btn btn-outline-danger m-2" onClick={() => {
+                                router.push("/users/chofer/list");
+                            }}>Cancelar</button>
                             {
                               params.id && (
                                 <button type="button" className="btn btn-outline-danger m-2"

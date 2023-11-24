@@ -34,8 +34,24 @@ model Cliente {
   email String @unique
   direccion String
   telefono Int @unique
+  envios Carga[] @relation("envio")
+  recibos Carga[] @relation("recibo")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Carga{
+  id_carga Int @id @default(autoincrement())
+  remitenteId Int
+  remitente Cliente @relation("envio",fields: [remitenteId], references: [id_cliente])
+  destinatarioId Int
+  destinatario Cliente @relation("recibo", fields: [destinatarioId], references: [id_cliente])
+  tipo String
+  destino String
+  importe Float
+  estado String
+  fecha_recibo DateTime @default(now())
+  fecha_entrega DateTime @updatedAt
 }
 
 model Chofer {
