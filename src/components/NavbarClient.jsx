@@ -15,18 +15,20 @@ function NavbarClient() {
       <div className="collapse navbar-collapse" id="navbarColor01">
         <ul className="navbar-nav me-auto">
           <li className="nav-item">
-            <a className="nav-link active" href="#">Inicio
-              <span className="visually-hidden">(current)</span>
-            </a>
+          <Link legacyBehavior href="/">
+            <a className="nav-link">Inicio</a>
+          </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Nosotros</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Contacto</a>
+          <Link legacyBehavior href="/Forms">
+            <a className="nav-link">Contacto</a>
+          </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Trabaja con Nosotros</a>
+          <a className="nav-link" href="/Socket">Chat</a>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"

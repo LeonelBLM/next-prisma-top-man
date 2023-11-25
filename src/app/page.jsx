@@ -1,12 +1,24 @@
 import NavbarClient from "@/components/NavbarClient";
 import Link from "next/link";
+import Image from 'next/image';
 import "./styles/clhero.css"
+import LoadingScreen from "@/components/LoadingScreens/LoadingScreen";
 
 function HomePage() {
 
   return (
 
     <>
+
+<LoadingScreen type="gradient-waves">
+        <Image
+          src="/services/logo.png"
+          alt="LOGO"
+          width={200}
+          height={200}
+        />
+      </LoadingScreen>
+
     <NavbarClient/>
     <section id="hero" className="d-flex align-items-center justify-content-center">
       <div className="container">
