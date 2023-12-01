@@ -7,7 +7,6 @@ import styles from '@/components/LoadingScreens/gradient-waves/styles/LSGradient
 export default function LSGradientScreen({ image }) {
   const ref = useRef();
 
-
   useEffect(() => {
     const onPageLoad = () => {
       const worker = new Worker(new URL('@/workers/wait.jsx', import.meta.url));

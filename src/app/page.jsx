@@ -10,15 +10,6 @@ function HomePage() {
 
     <>
 
-<LoadingScreen type="gradient-waves">
-        <Image
-          src="/services/logo.png"
-          alt="LOGO"
-          width={200}
-          height={200}
-        />
-      </LoadingScreen>
-
     <NavbarClient/>
     <section id="hero" className="d-flex align-items-center justify-content-center">
       <div className="container">

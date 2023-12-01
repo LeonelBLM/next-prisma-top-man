@@ -43,8 +43,8 @@ function RegisterPage() {
           <fieldset>
             <legend>Registrarse</legend>
             <div className="form-group">
-              <label className="form-label mt-4">Usuario</label>
-              <input type="text" className="form-control" id="title" aria-describedby="textarea" placeholder="Usuario" 
+              <label className="form-label mt-4" htmlFor="usuario">Usuario</label>
+              <input type="text" className="form-control" id="usuario" aria-describedby="textarea" placeholder="Usuario" 
                 { ...register("username", {
                   required: {
                     value: true,
